@@ -1,3 +1,115 @@
-*{
-    border: solid 1px red;
+/*input[name='1'][disabled]{
+    float: left;
+    width: 100%;
+    border: solid 1px black;
+}
+input[type="button"][name='1']{
+   float: left;
+    background-color: cadetblue;
+    width: 30%;
+}
+
+input[type="button"][name='2']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+
+input[type="button"][name='3']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+
+input[type="button"][name='+']{
+    float: inherit;
+    width: 9.5%;
+    background-color: slateblue;
+    margin-left: 0.5%;
+}
+input[type="button"][name='4']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='5']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='6']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='-']{
+    float: inherit;
+    width: 9.5%;
+    background-color: slateblue;
+    margin-left: 0.5%;
+}
+input[type="button"][name='7']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='8']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='9']{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+input[type="button"][name='*']{
+    float: inherit;
+    width: 9.5%;
+    background-color: slateblue;
+    margin-left: 0.5%;
+}
+input[type="button"][name='0']{
+    float: left;
+    width: 90%;
+    background-color: cadetblue;
+}
+input[type="button"][name='/']{
+    float: inherit;
+    width: 9.5%;
+    background-color: slateblue;
+    margin-left: 0.5%;
+}
+input[type="button"][name='=']{
+    float: left;
+    width: 100%;
+    background-color: slateblue;
+    margin-top: 0.5%;
+}*/
+
+.header *{
+    float: left;
+    width: 100%;
+}
+.numberFields *{
+    float: left;
+    width: 30%;
+    background-color: cadetblue;
+}
+
+.numberFields [name='0']{
+    width: 90%;
+ }
+
+.operations * {
+    float: inherit;
+    width: 9.5%;
+    background-color: slateblue;
+    margin-left: 0.5%;
+}
+.sum * {
+    float: left;
+    width: 100%;
+    background-color: slateblue;
+    margin-top: 0.5%;
 }
