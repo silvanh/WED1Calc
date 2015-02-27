@@ -86,10 +86,11 @@ input[type="button"][name='=']{
     background-color: slateblue;
     margin-top: 0.5%;
 }*/
-
 .header *{
     float: left;
     width: 100%;
+    padding: 0%;
+    margin-bottom: 0.5%;
 }
 .numberFields *{
     float: left;
