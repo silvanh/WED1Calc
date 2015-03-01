@@ -1,0 +1,41 @@
+
+.header *{
+  float: left;
+  width: 100%;
+  height: 4em;
+  font-size: 1em;
+  text-align: right;
+  border-color: black;
+  background-color: #e8e8df;
+  margin-bottom: 1%;
+}
+
+.numberFields *{
+  float: left;
+  background-color: #859c87;
+  width: 33.3%;
+}
+
+.numberFields [name='0']{
+  width: 100%;
+}
+
+.operations *{
+  float: left;
+  background-color: #9b8399;
+  width: 25%;
+  margin-top: 1%;
+}
+
+.sum *{
+  float: left;
+  width: 100%;
+  background-color: #9b8399;
+  margin-top: 1%;
+}
+
+input[type="button"]{
+  height: 4em;
+  font-size: 1em;
+  border-color: black;
+}
