@@ -91,11 +91,16 @@ input[type="button"][name='=']{
     width: 100%;
     padding: 0%;
     margin-bottom: 0.5%;
+    text-align: right;
+    background-color: #e8e8df;
+    font-size: 1em;
+    border-color: black;
+    height: 4em;
 }
 .numberFields *{
     float: left;
     width: 30%;
-    background-color: cadetblue;
+    background-color: #859c87;
 }
 
 .numberFields [name='0']{
@@ -105,12 +110,17 @@ input[type="button"][name='=']{
 .operations * {
     float: inherit;
     width: 9.5%;
-    background-color: slateblue;
+    background-color: #9b8399;
     margin-left: 0.5%;
 }
 .sum * {
     float: left;
     width: 100%;
-    background-color: slateblue;
+    background-color: #9b8399;
     margin-top: 0.5%;
+}
+input[type="button"]{
+  height: 4em;
+  font-size: 1em;
+  border-color: black;
 }
