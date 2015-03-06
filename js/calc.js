@@ -3,15 +3,23 @@
  */
 window.addEventListener("load", function(){
     var numberFields = document.querySelectorAll(".numberFields *");
+    var operators = document.querySelectorAll(".operations *");
     for(var i=0;i<numberFields.length;i++) {
-        var currentValue = numberFields[i].value;
-        numberFields[i].addEventListener('click',setValueOfHeader(numberFields[i].value));
+        numberFields[i].addEventListener('click',setValueOfHeader);
     }
+    for(var i=0;i<operators.length;i++) {
+        operators[i].addEventListener('click',setValueOfHeader);
+    }
+    document.querySelector(".sum *").addEventListener('click',clearValueOfHeader );
 });
 
 
-function setValueOfHeader(x){
-    console.log("clicked with value = "+x);
+function setValueOfHeader(){
     var headField = document.querySelector(".header *");
-    headField.value=x;
+    headField.value=this.value;
+}
+
+function clearValueOfHeader(){
+    var headField = document.querySelector(".header *");
+    headField.value="";
 }
