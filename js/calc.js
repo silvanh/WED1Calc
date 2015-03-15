@@ -1,25 +1,40 @@
-/**
- * Created by silvan on 3/6/15.
- */
-window.addEventListener("load", function(){
-    var numberFields = document.querySelectorAll(".numberFields *");
-    var operators = document.querySelectorAll(".operations *");
-    for(var i=0;i<numberFields.length;i++) {
-        numberFields[i].addEventListener('click',setValueOfHeader);
-    }
-    for(var i=0;i<operators.length;i++) {
-        operators[i].addEventListener('click',setValueOfHeader);
-    }
-    document.querySelector(".sum *").addEventListener('click',clearValueOfHeader );
+$(function() {
+    var operand1;
+    var operand2;
+    var operator = '';
+
+    $('.numberButton').on('click', function() {
+        var number = $(this).attr('name');
+        $('#outputField').attr('value', function(i, origValue) {
+            if(origValue === operator || origValue === '0'){
+                return number;
+            }
+            return origValue + number;
+        });
+    });
+
+    $('.operatorButton').on('click', function() {
+        operator = $(this).attr('name');
+       $('#outputField').attr('value', function(i, origValue) {
+            operand1 = origValue;
+            return operator;
+       });
+    });
+
+    $('#sumButton').on('click', function() {
+        $('#outputField').attr('value', function(i, origValue) {
+            operand2 = origValue;
+            if(operator === '+'){
+                return parseInt(operand1) + parseInt(operand2);
+            } else if(operator === '-'){
+                return parseInt(operand1) - parseInt(operand2);
+            } else if(operator === '*'){
+                return parseInt(operand1) * parseInt(operand2);
+            } else if(operator === '/'){    
+                return parseInt(operand1) / parseInt(operand2);
+            }else {
+                return origValue;
+            }
+        });
+    });
 });
-
-
-function setValueOfHeader(){
-    var headField = document.querySelector(".header *");
-    headField.value=this.value;
-}
-
-function clearValueOfHeader(){
-    var headField = document.querySelector(".header *");
-    headField.value="";
-}
