@@ -3,7 +3,7 @@ $(function() {
     var operand2;
     var operator = '';
 
-    $('.numberButton').on('click', function() {
+    $(".numberFields > input").on('click', function(){
         var number = $(this).attr('name');
         $('#outputField').attr('value', function(i, origValue) {
             if(origValue === operator || origValue === '0'){
@@ -13,12 +13,12 @@ $(function() {
         });
     });
 
-    $('.operatorButton').on('click', function() {
+    $(".operations > input").on('click',function(){
         operator = $(this).attr('name');
-       $('#outputField').attr('value', function(i, origValue) {
+        $('#outputField').attr('value', function(i, origValue) {
             operand1 = origValue;
             return operator;
-       });
+        });
     });
 
     $('#sumButton').on('click', function() {
