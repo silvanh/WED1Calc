@@ -5,10 +5,13 @@ var url = require('url');
 http.createServer(function (req, res) {
     'use strict'
     var url = req.url;
-    if (url === "/index.html" || url === "/calc.html") {
+    console.log(url);
+    if (url === "/index.html" || url === "/calc.html" || url === "/") {
         sendFile(res, "../index.html", "text/html");
     } else if (url === "/css/testat1-Design2.css") {
         sendFile(res, "../css/testat1-Design2.css", "text/css");
+    }else if (url === "/css/testat1-Design1.css") {
+        sendFile(res, "../css/testat1-Design1.css", "text/css");
     } else if (url === "/js/calc.js") {
         sendFile(res, "../js/calc.js", "text/javascript");
     }else if (url === "/deadLink.png") {
